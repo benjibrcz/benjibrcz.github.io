@@ -644,10 +644,19 @@ footer p {
 
   .hero {
     min-height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 5rem;
+  }
+
+  .hero::before {
+    background-size: auto 100%;
+    background-position: center center;
   }
 
   .hero .container {
     justify-content: center;
+    flex: 0;
   }
 
   .hero-content {
@@ -655,19 +664,18 @@ footer p {
   }
 
   .hero-photo {
-    position: static;
+    position: relative;
+    left: auto;
+    top: auto;
     transform: none;
-    width: 140px;
-    height: 140px;
-    margin: 0 auto 1.2rem;
+    width: 160px;
+    height: 160px;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   .hero h1 {
     font-size: 2rem;
-  }
-
-  .hero .subtitle {
-    font-size: 1.05rem;
   }
 
   .project-card {
