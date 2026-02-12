@@ -1,0 +1,447 @@
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  color: #1a1a2e;
+  background: #fafafa;
+  line-height: 1.6;
+}
+
+a {
+  color: #2a7a8c;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #1b5563;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+section:nth-child(even) {
+  background: #fff;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #1a1a2e;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #2a7a8c;
+  margin-top: 0.4rem;
+  border-radius: 2px;
+}
+
+/* ===== Nav ===== */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e8e8e8;
+  z-index: 100;
+  padding: 0.8rem 0;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #1a1a2e;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul a {
+  color: #555;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+nav ul a:hover {
+  color: #2a7a8c;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #1a1a2e;
+}
+
+/* ===== Hero ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 4rem;
+  background: #fff;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 0.6rem;
+}
+
+.hero .subtitle {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #555;
+  transition: all 0.2s;
+}
+
+.social-links a:hover {
+  border-color: #2a7a8c;
+  color: #2a7a8c;
+}
+
+.social-links svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* ===== About ===== */
+.about p {
+  font-size: 1.05rem;
+  color: #444;
+  max-width: 700px;
+  line-height: 1.75;
+}
+
+/* ===== Timeline (Experience & Education) ===== */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 2px;
+  background: #ddd;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -2rem;
+  top: 0.55rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #2a7a8c;
+  border: 2px solid #fff;
+  transform: translateX(-4px);
+}
+
+.timeline-item h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.timeline-item .meta {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item ul {
+  padding-left: 1.2rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.timeline-item ul li {
+  margin-bottom: 0.3rem;
+}
+
+/* ===== Projects ===== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  padding: 1.8rem;
+  transition: box-shadow 0.2s;
+}
+
+.project-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.project-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.project-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #2a7a8c;
+}
+
+.project-links a:hover {
+  color: #1b5563;
+}
+
+.project-links svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* ===== Publications ===== */
+.pub-list {
+  list-style: none;
+}
+
+.pub-list li {
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  border-left: 3px solid #e0e0e0;
+}
+
+.pub-list li:hover {
+  border-left-color: #2a7a8c;
+}
+
+.pub-list .pub-title {
+  font-weight: 600;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.pub-list .pub-venue {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.pub-list .pub-venue a {
+  font-weight: 500;
+}
+
+/* ===== Skills ===== */
+.skills-group {
+  margin-bottom: 1.5rem;
+}
+
+.skills-group h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  background: #eef6f8;
+  color: #2a7a8c;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #1a1a2e;
+  color: #ccc;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+footer a {
+  color: #7ec8d8;
+}
+
+footer a:hover {
+  color: #b0e0ec;
+}
+
+footer .footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+footer .footer-links a {
+  font-size: 0.9rem;
+}
+
+footer p {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero .subtitle {
+    font-size: 1.05rem;
+  }
+
+  section {
+    padding: 3rem 0;
+  }
+
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e8e8e8;
+    gap: 0.75rem;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .social-links a span {
+    display: none;
+  }
+
+  .social-links a {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}
