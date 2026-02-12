@@ -304,15 +304,13 @@ nav ul a.active {
 
 .hero-photo-sharp {
   position: absolute;
-  width: 70%;
-  height: 70%;
-  top: 15%;
-  left: 15%;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow:
-    0 0 20px rgba(0, 0, 0, 0.5),
-    0 0 60px rgba(255, 255, 255, 0.04);
+  mask-image: radial-gradient(circle, black 30%, transparent 60%);
+  -webkit-mask-image: radial-gradient(circle, black 30%, transparent 60%);
 }
 
 .hero h1 {
