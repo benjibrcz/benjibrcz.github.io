@@ -148,6 +148,8 @@
     var img = new Image();
     img.src = 'benji_profile_pic.jpg';
     var rotation = 0;
+    var startTime = 0;
+    var rampDuration = 3000; // 3 seconds to reach full distortion
     var cx = size / 2;
     var cy = size / 2;
     var r = size / 2;
@@ -160,18 +162,25 @@
       s = Math.min(img.width, img.height);
       sx = (img.width - s) / 2;
       sy = (img.height - s) / 2;
+      startTime = performance.now();
       requestAnimationFrame(draw);
     };
 
-    function draw() {
+    function draw(timestamp) {
       rotation += 0.002;
+      // Ramp from 0 to 1 over rampDuration
+      var elapsed = timestamp - startTime;
+      var ramp = Math.min(elapsed / rampDuration, 1);
+      // Ease-in-out for smooth start
+      ramp = ramp * ramp * (3 - 2 * ramp);
+
       ctx.clearRect(0, 0, size, size);
 
       // Draw spiral-distorted outer rings (from outermost inward)
       for (var i = numRings; i >= 1; i--) {
         var nd = edgeStart + (1 - edgeStart) * (i / numRings);
         var t = (nd - edgeStart) / (1 - edgeStart);
-        var angle = t * t * 1.8 + rotation * t * 2.5;
+        var angle = (t * t * 1.8 + rotation * t * 2.5) * ramp;
 
         ctx.save();
         ctx.beginPath();
