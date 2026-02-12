@@ -305,6 +305,13 @@ nav ul a.active {
 
 
 /* ===== About ===== */
+.about-headline {
+  font-size: 1.15rem;
+  color: var(--text);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
 .about p {
   font-size: 1.05rem;
   color: var(--text-secondary);
