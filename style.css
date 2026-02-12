@@ -74,6 +74,22 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url('black_hole.jpg') no-repeat;
+  background-size: 140% auto;
+  background-position: left center;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 0;
+}
+
+[data-theme="dark"] body::before {
+  opacity: 0.08;
+}
+
 a {
   color: var(--accent);
   text-decoration: none;
@@ -135,6 +151,13 @@ section > .container {
   background: var(--text);
   margin-top: 0.4rem;
   border-radius: 2px;
+}
+
+nav,
+section,
+footer {
+  position: relative;
+  z-index: 1;
 }
 
 /* ===== Nav ===== */
