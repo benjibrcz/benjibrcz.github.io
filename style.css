@@ -314,11 +314,12 @@ nav ul a.active {
 
 /* ===== About ===== */
 .about-headline {
-  font-size: 1.6rem;
+  font-size: clamp(0.9rem, 2.3vw, 1.6rem);
   color: var(--text);
   font-weight: 700;
   margin-bottom: 1rem;
   line-height: 1.4;
+  white-space: nowrap;
 }
 
 .about-current {
