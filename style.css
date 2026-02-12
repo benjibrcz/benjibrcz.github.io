@@ -249,7 +249,9 @@ nav ul a.active {
   content: "";
   position: absolute;
   inset: 0;
-  background: url('black_hole.jpg') 85% center / cover no-repeat;
+  background: url('black_hole.jpg') no-repeat;
+  background-size: 140% auto;
+  background-position: right center;
   opacity: 0.5;
 }
 
