@@ -317,9 +317,13 @@ nav ul a.active {
   font-size: clamp(0.9rem, 2.3vw, 1.6rem);
   color: var(--text);
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   line-height: 1.4;
   white-space: nowrap;
+}
+
+.about {
+  padding-top: 3rem;
 }
 
 .about-current {
