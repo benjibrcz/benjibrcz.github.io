@@ -644,9 +644,6 @@ footer p {
 
   .hero {
     min-height: 100vh;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 5rem;
   }
 
   .hero::before {
@@ -656,7 +653,10 @@ footer p {
 
   .hero .container {
     justify-content: center;
-    flex: 0;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
   }
 
   .hero-content {
@@ -664,14 +664,10 @@ footer p {
   }
 
   .hero-photo {
-    position: relative;
-    left: auto;
-    top: auto;
-    transform: none;
     width: 160px;
     height: 160px;
-    margin-top: auto;
-    margin-bottom: auto;
+    left: 50%;
+    top: 50%;
   }
 
   .hero h1 {
