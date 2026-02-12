@@ -320,6 +320,7 @@ nav ul a.active {
   margin-bottom: 1rem;
   line-height: 1.4;
   white-space: nowrap;
+  text-align: center;
 }
 
 .about-current {
