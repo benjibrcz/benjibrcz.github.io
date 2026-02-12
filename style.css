@@ -275,19 +275,27 @@ nav ul a.active {
   width: 100%;
 }
 
+.svg-filters {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
 .hero-photo {
   position: absolute;
-  width: 150px;
-  height: 150px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  /* Anchored to .hero at left:70% — same as the background image center
-     (140% wide, positioned left → center is at 70%) */
+  border: 2px solid rgba(255, 255, 255, 0.08);
   left: 70%;
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+  filter: url(#gravitational-lens);
+  box-shadow:
+    0 0 30px rgba(255, 255, 255, 0.08),
+    0 0 60px rgba(255, 255, 255, 0.04);
 }
 
 .hero h1 {
@@ -615,9 +623,10 @@ footer p {
   .hero-photo {
     position: static;
     transform: none;
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     margin: 0 auto 1.2rem;
+    filter: url(#gravitational-lens);
   }
 
   .hero h1 {

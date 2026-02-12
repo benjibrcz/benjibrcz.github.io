@@ -50,6 +50,17 @@
       <p class="subtitle">Machine Learning Scientist &amp; AI Safety Researcher</p>
     </div>
   </div>
+  <!-- Gravitational lensing filter -->
+  <svg class="svg-filters" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="gravitational-lens" x="-20%" y="-20%" width="140%" height="140%">
+        <feTurbulence type="turbulence" baseFrequency="0.015" numOctaves="3" seed="2" result="turbulence"/>
+        <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="25" xChannelSelector="R" yChannelSelector="G" result="displaced"/>
+        <feGaussianBlur in="displaced" stdDeviation="0.5" result="softened"/>
+        <feComposite in="softened" in2="SourceGraphic" operator="over"/>
+      </filter>
+    </defs>
+  </svg>
   <img src="benji_profile_pic.jpg" alt="Benjamin Berczi" class="hero-photo">
 </section>
 
