@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Benjamin Berczi — ML Scientist &amp; AI Safety Researcher</title>
   <meta name="description" content="Personal website of Benjamin Berczi, Machine Learning Scientist and AI Safety Researcher.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Benjamin Berczi — ML Scientist & AI Safety Researcher">
+  <meta property="og:description" content="Machine Learning Scientist and AI Safety Researcher. Currently a MATS research scholar working on interpreting goals and beliefs in LLMs.">
+  <meta property="og:image" content="https://benjibrcz.github.io/benji_profile_pic.jpg">
+  <meta property="og:url" content="https://benjibrcz.github.io">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232a7a8c' rx='18' width='100' height='100'/><text x='50' y='68' font-family='Inter,sans-serif' font-size='52' font-weight='700' fill='white' text-anchor='middle'>BB</text></svg>">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -35,6 +47,7 @@
     <div class="hero-content">
       <h1>Benjamin Berczi</h1>
       <p class="subtitle">Machine Learning Scientist &amp; AI Safety Researcher</p>
+      <p class="currently">Currently a research scholar at <strong>MATS</strong>, investigating goals and beliefs in LLMs.</p>
       <div class="social-links">
         <a href="mailto:benji.berczi@gmail.com">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
@@ -293,6 +306,27 @@
   document.querySelectorAll('nav ul a').forEach(function (link) {
     link.addEventListener('click', function () {
       document.querySelector('nav ul').classList.remove('open');
+    });
+  });
+
+  // Active nav highlighting on scroll
+  var sections = document.querySelectorAll('section[id]');
+  var navLinks = document.querySelectorAll('nav ul a');
+
+  window.addEventListener('scroll', function () {
+    var scrollY = window.scrollY + 120;
+    sections.forEach(function (section) {
+      var top = section.offsetTop;
+      var height = section.offsetHeight;
+      var id = section.getAttribute('id');
+      var link = document.querySelector('nav ul a[href="#' + id + '"]');
+      if (link) {
+        if (scrollY >= top && scrollY < top + height) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      }
     });
   });
 </script>

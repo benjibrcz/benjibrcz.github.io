@@ -42,7 +42,7 @@ img {
 }
 
 section {
-  padding: 4rem 0;
+  padding: 5.5rem 0;
 }
 
 section:nth-child(even) {
@@ -105,8 +105,14 @@ nav ul a {
   font-weight: 500;
 }
 
-nav ul a:hover {
+nav ul a:hover,
+nav ul a.active {
   color: #2a7a8c;
+}
+
+nav ul a.active {
+  border-bottom: 2px solid #2a7a8c;
+  padding-bottom: 2px;
 }
 
 .nav-toggle {
@@ -157,8 +163,14 @@ nav ul a:hover {
 .hero .subtitle {
   font-size: 1.25rem;
   color: #555;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.6rem;
   font-weight: 400;
+}
+
+.hero .currently {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 1.5rem;
 }
 
 .social-links {
@@ -434,7 +446,7 @@ footer p {
   }
 
   section {
-    padding: 3rem 0;
+    padding: 3.5rem 0;
   }
 
   nav ul {
