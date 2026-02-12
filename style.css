@@ -272,7 +272,7 @@ nav ul a.active {
   border: 2px solid rgba(255, 255, 255, 0.15);
   /* Position over the black hole center — image is 140% wide, anchored left,
      so its center sits at ~70% of viewport width */
-  right: 15%;
+  right: 25%;
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
