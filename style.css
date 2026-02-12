@@ -243,7 +243,7 @@ nav ul a.active {
 
 /* ===== Hero ===== */
 .hero {
-  min-height: 70vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -311,6 +311,32 @@ nav ul a.active {
   color: white;
 }
 
+
+/* ===== Scroll Hint ===== */
+.scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.5);
+  animation: bounce 2s ease infinite;
+  transition: color 0.2s;
+}
+
+.scroll-hint:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.scroll-hint svg {
+  width: 28px;
+  height: 28px;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
 
 /* ===== About ===== */
 .about-headline {
@@ -609,7 +635,7 @@ footer p {
   }
 
   .hero {
-    min-height: 60vh;
+    min-height: 100vh;
   }
 
   .hero .container {
