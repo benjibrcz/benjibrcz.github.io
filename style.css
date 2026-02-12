@@ -314,11 +314,11 @@ nav ul a.active {
 
 /* ===== About ===== */
 .about-headline {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   color: var(--text);
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  line-height: 1.5;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.4;
 }
 
 .about-current {
