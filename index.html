@@ -28,7 +28,13 @@
 <nav>
   <div class="container">
     <a href="#" class="logo">BB</a>
-    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <div class="nav-right">
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    </div>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
@@ -74,7 +80,7 @@
 
 <!-- About -->
 <section id="about" class="about">
-  <div class="container">
+  <div class="container fade-in">
     <h2 class="section-title">About</h2>
     <p>
       I'm a machine learning scientist with a background in theoretical physics, currently focused on AI safety research. I completed my PhD at the University of Nottingham, where I designed numerical simulations of quantum matter in curved spacetimes and published in leading physics journals. After transitioning into industry as an ML scientist at Depop, I built large-scale recommender systems using PyTorch, Spark, and cloud infrastructure. In parallel, I pursued AI safety research through AI Safety Camp and independent collaborations, working on mechanistic interpretability and activation steering. I'm now a research scholar at MATS, working on interpreting and evaluating goals and beliefs in large language models.
@@ -85,10 +91,10 @@
 <!-- Experience -->
 <section id="experience">
   <div class="container">
-    <h2 class="section-title">Experience</h2>
+    <h2 class="section-title fade-in">Experience</h2>
     <div class="timeline">
 
-      <div class="timeline-item">
+      <div class="timeline-item fade-in">
         <h3>Research Scholar — MATS</h3>
         <div class="meta">January 2026 – Present · Berkeley, USA</div>
         <ul>
@@ -97,7 +103,7 @@
         </ul>
       </div>
 
-      <div class="timeline-item">
+      <div class="timeline-item fade-in">
         <h3>Research Scientist — Independent</h3>
         <div class="meta">June 2025 – Present · London, UK</div>
         <ul>
@@ -106,7 +112,7 @@
         </ul>
       </div>
 
-      <div class="timeline-item">
+      <div class="timeline-item fade-in">
         <h3>Machine Learning Scientist — Depop</h3>
         <div class="meta">January 2024 – January 2026 · London, UK</div>
         <ul>
@@ -115,7 +121,7 @@
         </ul>
       </div>
 
-      <div class="timeline-item">
+      <div class="timeline-item fade-in">
         <h3>Research Fellow — AI Safety Camp</h3>
         <div class="meta">January 2024 – June 2024 · London, UK</div>
         <ul>
@@ -124,7 +130,7 @@
         </ul>
       </div>
 
-      <div class="timeline-item">
+      <div class="timeline-item fade-in">
         <h3>Data Scientist — Faculty AI</h3>
         <div class="meta">June 2023 – August 2023 · London, UK</div>
         <ul>
@@ -140,10 +146,10 @@
 <!-- Education -->
 <section id="education">
   <div class="container">
-    <h2 class="section-title">Education</h2>
+    <h2 class="section-title fade-in">Education</h2>
     <div class="timeline">
 
-      <div class="timeline-item">
+      <div class="timeline-item fade-in">
         <h3>PhD Theoretical Physics — University of Nottingham</h3>
         <div class="meta">October 2019 – December 2023 · Nottingham, UK</div>
         <ul>
@@ -153,12 +159,12 @@
         </ul>
       </div>
 
-      <div class="timeline-item">
+      <div class="timeline-item fade-in">
         <h3>MSc Theoretical &amp; Mathematical Physics — Imperial College London</h3>
         <div class="meta">September 2018 – September 2019 · London, UK</div>
       </div>
 
-      <div class="timeline-item">
+      <div class="timeline-item fade-in">
         <h3>BSc Physics — University College London</h3>
         <div class="meta">September 2015 – June 2018 · London, UK</div>
       </div>
@@ -170,47 +176,90 @@
 <!-- Projects -->
 <section id="projects">
   <div class="container">
-    <h2 class="section-title">Projects</h2>
+    <h2 class="section-title fade-in">Projects</h2>
     <div class="projects-grid">
 
-      <div class="project-card">
-        <h3>Interpreting Goal-Conditioned RL Agents</h3>
-        <p>Probing and steering the DeepLTL goal-conditioned agent system to understand how goal information is encoded and whether the agent develops an internal world model versus relying on behavioural heuristics. Drawing from causal inference theory in collaboration with a Google DeepMind researcher.</p>
-        <div class="project-links">
-          <a href="https://github.com/benjibrcz/deep-ltl-goal-representation" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.84 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6.02 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></svg>
-            Goal Representation
-          </a>
-          <a href="https://github.com/benjibrcz/deep-ltl-interp" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.84 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6.02 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></svg>
-            Interpretability Analysis
-          </a>
+      <div class="project-card fade-in">
+        <div class="project-thumb" aria-hidden="true">
+          <!-- Neural network / RL agent icon -->
+          <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="6" fill="#2a7a8c" opacity="0.3"/><circle cx="20" cy="40" r="6" fill="#2a7a8c" opacity="0.3"/><circle cx="20" cy="60" r="6" fill="#2a7a8c" opacity="0.3"/>
+            <circle cx="60" cy="15" r="6" fill="#2a7a8c" opacity="0.5"/><circle cx="60" cy="40" r="6" fill="#2a7a8c" opacity="0.5"/><circle cx="60" cy="65" r="6" fill="#2a7a8c" opacity="0.5"/>
+            <circle cx="100" cy="30" r="6" fill="#2a7a8c" opacity="0.8"/><circle cx="100" cy="50" r="6" fill="#2a7a8c" opacity="0.8"/>
+            <line x1="26" y1="20" x2="54" y2="15" stroke="#2a7a8c" opacity="0.2"/><line x1="26" y1="20" x2="54" y2="40" stroke="#2a7a8c" opacity="0.2"/><line x1="26" y1="40" x2="54" y2="15" stroke="#2a7a8c" opacity="0.2"/><line x1="26" y1="40" x2="54" y2="40" stroke="#2a7a8c" opacity="0.2"/><line x1="26" y1="40" x2="54" y2="65" stroke="#2a7a8c" opacity="0.2"/><line x1="26" y1="60" x2="54" y2="40" stroke="#2a7a8c" opacity="0.2"/><line x1="26" y1="60" x2="54" y2="65" stroke="#2a7a8c" opacity="0.2"/>
+            <line x1="66" y1="15" x2="94" y2="30" stroke="#2a7a8c" opacity="0.2"/><line x1="66" y1="15" x2="94" y2="50" stroke="#2a7a8c" opacity="0.2"/><line x1="66" y1="40" x2="94" y2="30" stroke="#2a7a8c" opacity="0.2"/><line x1="66" y1="40" x2="94" y2="50" stroke="#2a7a8c" opacity="0.2"/><line x1="66" y1="65" x2="94" y2="30" stroke="#2a7a8c" opacity="0.2"/><line x1="66" y1="65" x2="94" y2="50" stroke="#2a7a8c" opacity="0.2"/>
+          </svg>
+        </div>
+        <div class="project-body">
+          <h3>Interpreting Goal-Conditioned RL Agents</h3>
+          <p>Probing and steering the DeepLTL goal-conditioned agent system to understand how goal information is encoded and whether the agent develops an internal world model versus relying on behavioural heuristics. Drawing from causal inference theory in collaboration with a Google DeepMind researcher.</p>
+          <div class="project-links">
+            <a href="https://github.com/benjibrcz/deep-ltl-goal-representation" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.84 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6.02 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></svg>
+              Goal Representation
+            </a>
+            <a href="https://github.com/benjibrcz/deep-ltl-interp" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.84 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6.02 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></svg>
+              Interpretability Analysis
+            </a>
+          </div>
         </div>
       </div>
 
-      <div class="project-card">
-        <h3>AI Safety Camp: UnSearch</h3>
-        <p>Interpretability research on maze-solving transformers as part of AI Safety Camp. Investigated how transformers represent and solve maze navigation internally, and successfully implemented activation steering to control model behaviour and understand learned representations.</p>
-        <div class="project-links">
-          <a href="https://github.com/benjibrcz/ai-safety-camp-unsearch" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.84 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6.02 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></svg>
-            View Repository
-          </a>
+      <div class="project-card fade-in">
+        <div class="project-thumb" aria-hidden="true">
+          <!-- Maze icon -->
+          <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="5" width="100" height="70" rx="4" stroke="#2a7a8c" opacity="0.3" stroke-width="2" fill="none"/>
+            <line x1="10" y1="22" x2="70" y2="22" stroke="#2a7a8c" opacity="0.25" stroke-width="2"/>
+            <line x1="40" y1="22" x2="40" y2="45" stroke="#2a7a8c" opacity="0.25" stroke-width="2"/>
+            <line x1="40" y1="45" x2="90" y2="45" stroke="#2a7a8c" opacity="0.25" stroke-width="2"/>
+            <line x1="70" y1="5" x2="70" y2="35" stroke="#2a7a8c" opacity="0.25" stroke-width="2"/>
+            <line x1="25" y1="45" x2="25" y2="60" stroke="#2a7a8c" opacity="0.25" stroke-width="2"/>
+            <line x1="25" y1="60" x2="75" y2="60" stroke="#2a7a8c" opacity="0.25" stroke-width="2"/>
+            <line x1="90" y1="22" x2="90" y2="60" stroke="#2a7a8c" opacity="0.25" stroke-width="2"/>
+            <circle cx="20" cy="13" r="4" fill="#2a7a8c" opacity="0.6"/>
+            <circle cx="100" cy="67" r="4" fill="#2a7a8c" opacity="0.6"/>
+            <path d="M20 13 L20 22" stroke="#2a7a8c" opacity="0" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="project-body">
+          <h3>AI Safety Camp: UnSearch</h3>
+          <p>Interpretability research on maze-solving transformers as part of AI Safety Camp. Investigated how transformers represent and solve maze navigation internally, and successfully implemented activation steering to control model behaviour and understand learned representations.</p>
+          <div class="project-links">
+            <a href="https://github.com/benjibrcz/ai-safety-camp-unsearch" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.84 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6.02 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></svg>
+              View Repository
+            </a>
+          </div>
         </div>
       </div>
 
-      <div class="project-card">
-        <h3>PhD: Simulating Semiclassical Black Holes</h3>
-        <p>Designed and implemented numerical simulations of the gravitational collapse of quantum matter in C. Modelled quantum field theory on dynamical curved spacetimes to study black hole formation and evaporation, resulting in three peer-reviewed publications.</p>
-        <div class="project-links">
-          <a href="https://github.com/benjibrcz/PhD" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.84 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6.02 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></svg>
-            View Repository
-          </a>
-          <a href="https://eprints.nottingham.ac.uk/77527/" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            Thesis
-          </a>
+      <div class="project-card fade-in">
+        <div class="project-thumb" aria-hidden="true">
+          <!-- Black hole / gravity icon -->
+          <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="60" cy="40" r="12" fill="#1a1a2e"/>
+            <ellipse cx="60" cy="40" rx="35" ry="10" stroke="#2a7a8c" opacity="0.3" stroke-width="1.5" fill="none"/>
+            <ellipse cx="60" cy="40" rx="28" ry="18" stroke="#2a7a8c" opacity="0.2" stroke-width="1" fill="none" transform="rotate(30 60 40)"/>
+            <ellipse cx="60" cy="40" rx="28" ry="18" stroke="#2a7a8c" opacity="0.2" stroke-width="1" fill="none" transform="rotate(-30 60 40)"/>
+            <circle cx="60" cy="40" r="25" stroke="#2a7a8c" opacity="0.15" stroke-width="1" fill="none"/>
+            <circle cx="60" cy="40" r="35" stroke="#2a7a8c" opacity="0.1" stroke-width="1" fill="none"/>
+          </svg>
+        </div>
+        <div class="project-body">
+          <h3>PhD: Simulating Semiclassical Black Holes</h3>
+          <p>Designed and implemented numerical simulations of the gravitational collapse of quantum matter in C. Modelled quantum field theory on dynamical curved spacetimes to study black hole formation and evaporation, resulting in three peer-reviewed publications.</p>
+          <div class="project-links">
+            <a href="https://github.com/benjibrcz/PhD" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.84 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6.02 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></svg>
+              View Repository
+            </a>
+            <a href="https://eprints.nottingham.ac.uk/77527/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Thesis
+            </a>
+          </div>
         </div>
       </div>
 
@@ -221,22 +270,26 @@
 <!-- Publications -->
 <section id="publications">
   <div class="container">
-    <h2 class="section-title">Publications</h2>
+    <h2 class="section-title fade-in">Publications</h2>
     <ul class="pub-list">
-      <li>
+      <li class="fade-in">
         <span class="pub-title">Quantum correlations in a gravitational collapse simulation with SpheriCo.jl</span>
+        <span class="pub-desc">Simulated quantum entanglement during black hole formation using a new Julia framework, revealing how quantum correlations evolve in gravitational collapse.</span>
         <span class="pub-venue">Journal of High Energy Physics, 2025 &middot; <a href="https://doi.org/10.1007/JHEP05(2025)173" target="_blank" rel="noopener">DOI</a></span>
       </li>
-      <li>
+      <li class="fade-in">
         <span class="pub-title">Gravitational collapse of quantum fields and Choptuik scaling</span>
+        <span class="pub-desc">Discovered that critical phenomena at the threshold of black hole formation persist even when quantum effects are included.</span>
         <span class="pub-venue">Journal of High Energy Physics, 2022 &middot; <a href="https://doi.org/10.1007/JHEP02(2022)183" target="_blank" rel="noopener">DOI</a></span>
       </li>
-      <li>
+      <li class="fade-in">
         <span class="pub-title">Gravitational collapse with quantum fields</span>
+        <span class="pub-desc">First numerical simulation of gravitational collapse incorporating backreaction from quantum matter, showing how quantum effects modify black hole formation.</span>
         <span class="pub-venue">Physical Review D, 2021 &middot; <a href="https://doi.org/10.1103/PhysRevD.104.L041703" target="_blank" rel="noopener">DOI</a></span>
       </li>
-      <li>
+      <li class="fade-in">
         <span class="pub-title">Simulating Semiclassical Black Holes</span>
+        <span class="pub-desc">PhD thesis unifying the above work into a comprehensive framework for simulating quantum effects in black hole spacetimes.</span>
         <span class="pub-venue">PhD Thesis, University of Nottingham, 2023 &middot; <a href="https://eprints.nottingham.ac.uk/77527/" target="_blank" rel="noopener">Full text</a></span>
       </li>
     </ul>
@@ -246,7 +299,7 @@
 <!-- Skills -->
 <section id="skills">
   <div class="container">
-    <h2 class="section-title">Skills</h2>
+    <h2 class="section-title fade-in">Skills</h2>
 
     <div class="skills-group">
       <h3>Languages</h3>
@@ -299,6 +352,7 @@
 </footer>
 
 <script>
+  // Mobile nav toggle
   document.querySelector('.nav-toggle').addEventListener('click', function () {
     document.querySelector('nav ul').classList.toggle('open');
   });
@@ -311,7 +365,6 @@
 
   // Active nav highlighting on scroll
   var sections = document.querySelectorAll('section[id]');
-  var navLinks = document.querySelectorAll('nav ul a');
 
   window.addEventListener('scroll', function () {
     var scrollY = window.scrollY + 120;
@@ -328,6 +381,42 @@
         }
       }
     });
+  });
+
+  // Scroll-triggered fade-in
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.fade-in').forEach(function (el) {
+    observer.observe(el);
+  });
+
+  // Dark / light mode toggle
+  var toggle = document.querySelector('.theme-toggle');
+  var html = document.documentElement;
+
+  function setTheme(dark) {
+    html.setAttribute('data-theme', dark ? 'dark' : 'light');
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+  }
+
+  // Init from saved preference or system preference
+  var saved = localStorage.getItem('theme');
+  if (saved) {
+    setTheme(saved === 'dark');
+  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    setTheme(true);
+  }
+
+  toggle.addEventListener('click', function () {
+    var isDark = html.getAttribute('data-theme') === 'dark';
+    setTheme(!isDark);
   });
 </script>
 
