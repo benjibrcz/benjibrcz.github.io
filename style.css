@@ -258,12 +258,7 @@ nav ul a.active {
   max-width: 1100px;
 }
 
-.hero-card {
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 2.5rem;
+.hero-content {
   max-width: 480px;
   width: 100%;
 }
@@ -302,34 +297,6 @@ nav ul a.active {
   color: white;
 }
 
-.social-links {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-}
-
-.social-links a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.45rem 0.9rem;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 6px;
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.6);
-  transition: all 0.2s;
-}
-
-.social-links a:hover {
-  border-color: rgba(255, 255, 255, 0.4);
-  color: white;
-}
-
-.social-links svg {
-  width: 15px;
-  height: 15px;
-  flex-shrink: 0;
-}
 
 /* ===== About ===== */
 .about p {
@@ -608,8 +575,7 @@ footer p {
     justify-content: center;
   }
 
-  .hero-card {
-    padding: 2rem;
+  .hero-content {
     text-align: center;
   }
 
@@ -618,10 +584,6 @@ footer p {
     height: 80px;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .social-links {
-    justify-content: center;
   }
 
   .hero h1 {
@@ -663,13 +625,6 @@ footer p {
     display: block;
   }
 
-  .social-links a span {
-    display: none;
-  }
-
-  .social-links a {
-    padding: 0.5rem;
-  }
 }
 
 @media (max-width: 480px) {
