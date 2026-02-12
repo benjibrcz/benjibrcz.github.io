@@ -157,18 +157,6 @@ nav .container {
   align-items: center;
 }
 
-nav .logo {
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--text);
-}
-
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
 nav ul {
   list-style: none;
   display: flex;
@@ -197,6 +185,7 @@ nav ul a.active {
   display: flex;
   align-items: center;
   transition: color 0.2s;
+  margin-left: auto;
 }
 
 .theme-toggle:hover {
