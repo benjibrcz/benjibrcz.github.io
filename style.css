@@ -331,6 +331,14 @@ nav ul a.active {
   line-height: 1.75;
 }
 
+/* ===== Content Card ===== */
+.content-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
 /* ===== Timeline (Experience & Education) ===== */
 .timeline {
   position: relative;
