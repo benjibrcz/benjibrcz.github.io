@@ -259,7 +259,7 @@ nav ul a.active {
   background: url('black_hole.jpg') no-repeat;
   background-size: 140% auto;
   background-position: left center;
-  opacity: 0.6;
+  opacity: 0.4;
 }
 
 .hero .container {
