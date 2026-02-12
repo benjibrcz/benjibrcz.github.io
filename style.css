@@ -264,12 +264,18 @@ nav ul a.active {
 }
 
 .hero-photo {
-  width: 90px;
-  height: 90px;
+  position: absolute;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid rgba(255, 255, 255, 0.15);
-  margin-bottom: 1.2rem;
+  /* Position over the black hole center — image is 140% wide, anchored left,
+     so its center sits at ~70% of viewport width */
+  right: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
 }
 
 .hero h1 {
@@ -580,10 +586,11 @@ footer p {
   }
 
   .hero-photo {
+    position: static;
+    transform: none;
     width: 80px;
     height: 80px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 1.2rem;
   }
 
   .hero h1 {
