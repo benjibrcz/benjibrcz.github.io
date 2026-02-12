@@ -249,7 +249,7 @@ nav ul a.active {
   content: "";
   position: absolute;
   inset: 0;
-  background: url('black_hole.jpg') center center / cover no-repeat;
+  background: url('black_hole.jpg') 70% center / cover no-repeat;
   opacity: 0.5;
 }
 
@@ -257,7 +257,7 @@ nav ul a.active {
   position: relative;
   z-index: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .hero-card {
@@ -598,6 +598,10 @@ footer p {
 
   .hero {
     min-height: 100vh;
+  }
+
+  .hero .container {
+    justify-content: center;
   }
 
   .hero-card {
