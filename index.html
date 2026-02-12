@@ -50,19 +50,7 @@
       <p class="subtitle">Machine Learning Scientist &amp; AI Safety Researcher</p>
     </div>
   </div>
-  <!-- Gravitational lensing filter -->
-  <svg class="svg-filters" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <filter id="gravitational-lens" x="-20%" y="-20%" width="140%" height="140%">
-        <feTurbulence type="turbulence" baseFrequency="0.012" numOctaves="3" seed="2" result="turbulence"/>
-        <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="30" xChannelSelector="R" yChannelSelector="G"/>
-      </filter>
-    </defs>
-  </svg>
-  <div class="hero-photo-wrap">
-    <img src="benji_profile_pic.jpg" alt="" class="hero-photo-distorted">
-    <img src="benji_profile_pic.jpg" alt="Benjamin Berczi" class="hero-photo-sharp">
-  </div>
+  <canvas class="hero-photo" id="hero-photo-canvas" width="480" height="480"></canvas>
 </section>
 
 <!-- About -->
@@ -150,6 +138,97 @@
     var isDark = html.getAttribute('data-theme') === 'dark';
     setTheme(!isDark);
   });
+
+  // Spiral distortion on profile photo
+  (function () {
+    var canvas = document.getElementById('hero-photo-canvas');
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+    var size = canvas.width; // 480 (2x for retina)
+    var img = new Image();
+    img.src = 'benji_profile_pic.jpg';
+    var rotation = 0;
+    var srcData = null;
+
+    img.onload = function () {
+      // Draw image to offscreen canvas to read pixels
+      var off = document.createElement('canvas');
+      off.width = size;
+      off.height = size;
+      var octx = off.getContext('2d');
+      // Draw as cover (center crop)
+      var s = Math.min(img.width, img.height);
+      var sx = (img.width - s) / 2;
+      var sy = (img.height - s) / 2;
+      octx.drawImage(img, sx, sy, s, s, 0, 0, size, size);
+      srcData = octx.getImageData(0, 0, size, size).data;
+      requestAnimationFrame(draw);
+    };
+
+    function draw() {
+      rotation += 0.003;
+      var output = ctx.createImageData(size, size);
+      var dst = output.data;
+      var cx = size / 2;
+      var cy = size / 2;
+      var r = size / 2;
+      var edgeStart = 0.8; // distortion begins at 80% radius
+
+      for (var y = 0; y < size; y++) {
+        for (var x = 0; x < size; x++) {
+          var dx = x - cx;
+          var dy = y - cy;
+          var dist = Math.sqrt(dx * dx + dy * dy);
+          var nd = dist / r; // normalized distance 0..1
+
+          if (nd > 1) continue; // outside circle
+
+          var srcX, srcY;
+
+          if (nd <= edgeStart) {
+            // Center: no distortion
+            srcX = x;
+            srcY = y;
+          } else {
+            // Edge ring: apply spiral swirl
+            var t = (nd - edgeStart) / (1 - edgeStart); // 0 at edgeStart, 1 at edge
+            var swirlAngle = t * t * 2.0 + rotation * t * 3.0;
+            var cosA = Math.cos(swirlAngle);
+            var sinA = Math.sin(swirlAngle);
+            srcX = cx + dx * cosA - dy * sinA;
+            srcY = cy + dx * sinA + dy * cosA;
+          }
+
+          // Bilinear interpolation
+          var fx = Math.floor(srcX);
+          var fy = Math.floor(srcY);
+          var wx = srcX - fx;
+          var wy = srcY - fy;
+
+          if (fx < 0 || fx >= size - 1 || fy < 0 || fy >= size - 1) continue;
+
+          var i00 = (fy * size + fx) * 4;
+          var i10 = i00 + 4;
+          var i01 = i00 + size * 4;
+          var i11 = i01 + 4;
+          var di = (y * size + x) * 4;
+
+          for (var c = 0; c < 3; c++) {
+            dst[di + c] = (
+              srcData[i00 + c] * (1 - wx) * (1 - wy) +
+              srcData[i10 + c] * wx * (1 - wy) +
+              srcData[i01 + c] * (1 - wx) * wy +
+              srcData[i11 + c] * wx * wy
+            );
+          }
+          dst[di + 3] = 255;
+        }
+      }
+
+      ctx.putImageData(output, 0, 0);
+      requestAnimationFrame(draw);
+    }
+  })();
 </script>
 
 </body>

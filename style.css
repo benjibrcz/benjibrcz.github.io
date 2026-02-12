@@ -275,13 +275,7 @@ nav ul a.active {
   width: 100%;
 }
 
-.svg-filters {
-  position: absolute;
-  width: 0;
-  height: 0;
-}
-
-.hero-photo-wrap {
+.hero-photo {
   position: absolute;
   width: 240px;
   height: 240px;
@@ -290,33 +284,6 @@ nav ul a.active {
   transform: translate(-50%, -50%);
   z-index: 2;
   border-radius: 50%;
-  overflow: hidden;
-}
-
-.hero-photo-distorted {
-  position: absolute;
-  top: -10%;
-  left: -10%;
-  width: 120%;
-  height: 120%;
-  object-fit: cover;
-  filter: url(#gravitational-lens);
-  animation: slow-swirl 30s linear infinite;
-}
-
-@keyframes slow-swirl {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.hero-photo-sharp {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  mask-image: radial-gradient(circle, black 25%, transparent 55%);
-  -webkit-mask-image: radial-gradient(circle, black 25%, transparent 55%);
 }
 
 .hero h1 {
@@ -641,7 +608,7 @@ footer p {
     text-align: center;
   }
 
-  .hero-photo-wrap {
+  .hero-photo {
     position: static;
     transform: none;
     width: 140px;
