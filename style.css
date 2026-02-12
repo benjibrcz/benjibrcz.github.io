@@ -1,52 +1,52 @@
 /* ===== CSS Variables & Dark Mode ===== */
 :root {
-  --bg: #fafafa;
+  --bg: #f5f4f2;
   --bg-alt: #fff;
-  --text: #1a1a2e;
-  --text-secondary: #555;
-  --text-muted: #777;
-  --text-faint: #888;
-  --accent: #2a7a8c;
-  --accent-hover: #1b5563;
-  --border: #e8e8e8;
-  --border-light: #ddd;
-  --border-pub: #e0e0e0;
-  --chip-bg: #eef6f8;
+  --text: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-muted: #6e6e6e;
+  --text-faint: #8a8a8a;
+  --accent: #c8883a;
+  --accent-hover: #a66e2a;
+  --border: #e0ddd8;
+  --border-light: #d4d0ca;
+  --border-pub: #d8d5d0;
+  --chip-bg: #f0ebe4;
   --card-bg: #fff;
   --card-shadow: rgba(0, 0, 0, 0.06);
   --nav-bg: rgba(255, 255, 255, 0.95);
-  --footer-bg: #1a1a2e;
-  --footer-text: #ccc;
-  --footer-link: #7ec8d8;
-  --footer-link-hover: #b0e0ec;
-  --footer-muted: #888;
+  --footer-bg: #111;
+  --footer-text: #bbb;
+  --footer-link: #d4a04a;
+  --footer-link-hover: #e8c070;
+  --footer-muted: #666;
   --timeline-dot-border: #fff;
-  --thumb-bg: #f4f8f9;
+  --thumb-bg: #f0ebe4;
 }
 
 [data-theme="dark"] {
-  --bg: #0f0f1a;
-  --bg-alt: #1a1a2e;
-  --text: #e0e0e8;
-  --text-secondary: #b0b0c0;
-  --text-muted: #8888a0;
-  --text-faint: #6e6e88;
-  --accent: #4ecde0;
-  --accent-hover: #7ee0ee;
-  --border: #2a2a40;
-  --border-light: #333350;
-  --border-pub: #333350;
-  --chip-bg: #1a2e35;
-  --card-bg: #1a1a2e;
-  --card-shadow: rgba(0, 0, 0, 0.3);
-  --nav-bg: rgba(15, 15, 26, 0.95);
-  --footer-bg: #08080f;
-  --footer-text: #999;
-  --footer-link: #4ecde0;
-  --footer-link-hover: #7ee0ee;
-  --footer-muted: #555;
-  --timeline-dot-border: #1a1a2e;
-  --thumb-bg: #15152a;
+  --bg: #0a0a0a;
+  --bg-alt: #141414;
+  --text: #e8e6e2;
+  --text-secondary: #b0ada6;
+  --text-muted: #888580;
+  --text-faint: #666360;
+  --accent: #d4a04a;
+  --accent-hover: #e8c070;
+  --border: #252525;
+  --border-light: #303030;
+  --border-pub: #303030;
+  --chip-bg: #1e1a14;
+  --card-bg: #141414;
+  --card-shadow: rgba(0, 0, 0, 0.4);
+  --nav-bg: rgba(10, 10, 10, 0.95);
+  --footer-bg: #050505;
+  --footer-text: #888;
+  --footer-link: #d4a04a;
+  --footer-link-hover: #e8c070;
+  --footer-muted: #444;
+  --timeline-dot-border: #141414;
+  --thumb-bg: #1a1714;
 }
 
 /* ===== Reset & Base ===== */
@@ -233,7 +233,55 @@ nav ul a.active {
   display: flex;
   align-items: center;
   padding-top: 4rem;
-  background: var(--bg-alt);
+  background: #0a0a0a;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('black_hole.jpg') center center / cover no-repeat;
+  opacity: 0.35;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1,
+.hero .subtitle,
+.hero .currently,
+.hero .social-links a {
+  color: #f0ede8;
+}
+
+.hero .subtitle {
+  color: #c0bdb8 !important;
+}
+
+.hero .currently {
+  color: #999690 !important;
+}
+
+.hero .currently strong {
+  color: #d4a04a;
+}
+
+.hero .social-links a {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #c0bdb8;
+}
+
+.hero .social-links a:hover {
+  border-color: #d4a04a;
+  color: #d4a04a;
+}
+
+.hero-photo {
+  border-color: rgba(255, 255, 255, 0.2) !important;
 }
 
 .hero-inner {
@@ -265,14 +313,12 @@ nav ul a.active {
 
 .hero .subtitle {
   font-size: 1.25rem;
-  color: var(--text-secondary);
   margin-bottom: 0.6rem;
   font-weight: 400;
 }
 
 .hero .currently {
   font-size: 1rem;
-  color: var(--text-muted);
   margin-bottom: 1.5rem;
 }
 
@@ -568,6 +614,10 @@ footer p {
   .hero-photo {
     width: 110px;
     height: 110px;
+  }
+
+  .hero::before {
+    opacity: 0.25;
   }
 
   .social-links {
