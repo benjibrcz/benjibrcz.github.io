@@ -469,6 +469,17 @@ nav ul a.active {
   object-fit: cover;
 }
 
+.emoji-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emoji-thumb span {
+  font-size: 5rem;
+  line-height: 1;
+}
+
 .project-body {
   padding: 1.5rem 1.8rem;
   flex: 1;
