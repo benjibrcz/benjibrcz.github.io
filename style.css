@@ -469,10 +469,6 @@ nav ul a.active {
   object-fit: cover;
 }
 
-.project-thumb.contain img {
-  object-fit: contain;
-}
-
 .project-body {
   padding: 1.5rem 1.8rem;
   flex: 1;
