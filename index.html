@@ -80,70 +80,50 @@
             </a>
           </li>
           <li>
-            <a href="resume.pdf" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-              CV
+            <a href="https://x.com/benji_berczi" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              X
             </a>
           </li>
         </ul>
       </aside>
 
-      <!-- Main column: name, bio, questions -->
+      <!-- Main column: name, bio, recent work -->
       <div class="home-main">
         <h1>Benjamin Berczi</h1>
-        <p class="home-tagline">Machine learning scientist &middot; AI safety researcher &middot; former theoretical physicist</p>
 
         <p>
-          I'm a research scholar at <a href="https://www.matsprogram.org/" target="_blank" rel="noopener">MATS</a> in the evaluations stream, mentored by Cozmin Ududec (<a href="https://www.aisi.gov.uk/" target="_blank" rel="noopener">UK AISI</a>). I study how personas and latent modes are induced in language models, and how they drive misalignment.
+          Hi! I'm Benji, an AI safety researcher, machine learning scientist and former theoretical physicist. I'm currently a research scholar at <a href="https://www.matsprogram.org/" target="_blank" rel="noopener">MATS</a>, mentored by Cozmin Ududec (<a href="https://www.aisi.gov.uk/" target="_blank" rel="noopener">UK AISI</a>), studying how <a href="https://arxiv.org/abs/2609.06851" target="_blank" rel="noopener">personas are induced in language models</a>, <a href="https://www.lesswrong.com/posts/5WMwjEwam9HNQYZLZ/personascope-measuring-how-deeply-llms-adopt-personas" target="_blank" rel="noopener">how deeply models adopt them</a>, and how that drives misalignment.
         </p>
         <p>
-          Before MATS I was an ML scientist at Depop, building large-scale recommender systems. Earlier I did a PhD in theoretical physics at the University of Nottingham, simulating quantum matter in curved spacetime to study how tiny black holes form.
+          Before MATS I was an ML scientist at <a href="https://www.depop.com/" target="_blank" rel="noopener">Depop</a>, building large-scale recommender systems, and worked on <a href="https://docs.google.com/document/d/1JL8zTDGAluMVgbEyCHNUNRg2Gy2dE0BGBIwWfUnn4O4/edit?tab=t.0#heading=h.eoflj0cpw7ns" target="_blank" rel="noopener">interpreting goal-conditioned RL agents</a> with a researcher at Google DeepMind. Earlier I did a <a href="https://eprints.nottingham.ac.uk/77527/" target="_blank" rel="noopener">PhD in theoretical physics</a> at the University of Nottingham, writing <a href="https://github.com/benjibrcz/PhD" target="_blank" rel="noopener">simulations of quantum matter in curved spacetime</a> to study how tiny black holes form.
         </p>
 
-        <h2 class="home-subhead">Current questions</h2>
-        <ul class="home-questions">
-          <li>
-            <span class="q-title">Benign context as an attack surface.</span>
-            <span class="q-tag">[Paper]</span>
-            <span class="q-desc">Biographical facts alone, placed in a model's context, induce a persona that spreads misalignment to questions the facts never touch.</span>
-          </li>
-          <li>
-            <span class="q-title">How deeply models adopt personas.</span>
-            <span class="q-tag">[Personascope]</span>
-            <span class="q-desc">Separating how fully a model role-plays a character from how much its values actually shift, with an open-source measurement pipeline.</span>
-          </li>
-          <li>
-            <span class="q-title">Personas as Bayesian mode selection.</span>
-            <span class="q-tag">[Ongoing]</span>
-            <span class="q-desc">Treating behaviour as a posterior over personas that pretraining, fine-tuning and in-context evidence reshape on a shared scale.</span>
-          </li>
-        </ul>
+        <!-- Recent work -->
+        <section class="home-work" id="recent-work">
+          <h2 class="home-subhead">Recent work</h2>
+          <ul class="work-list">
+            <li>
+              <span class="work-title"><a href="https://arxiv.org/abs/2609.06851" target="_blank" rel="noopener">You Are What You Read: Misalignment via In-Context Persona Induction</a></span>
+              <span class="work-meta">with Kyuhee Kim and Cozmin Ududec &middot; arXiv, 2026</span>
+              <span class="work-links"><a href="https://arxiv.org/abs/2609.06851" target="_blank" rel="noopener">arXiv</a> &middot; <a href="https://www.lesswrong.com/posts/cffGZn8LYBg2jyPvg/in-context-learning-alone-can-induce-weird-generalisation-5" target="_blank" rel="noopener">LessWrong</a></span>
+            </li>
+            <li>
+              <span class="work-title"><a href="https://www.lesswrong.com/posts/Jc9YZEmqHgocAKiaH/does-distilling-claude-carry-the-persona-with-it" target="_blank" rel="noopener">Does Distilling Claude Carry the Persona With It?</a></span>
+              <span class="work-meta">with Kyuhee Kim &middot; LessWrong, 2026</span>
+              <span class="work-links"><a href="https://www.lesswrong.com/posts/Jc9YZEmqHgocAKiaH/does-distilling-claude-carry-the-persona-with-it" target="_blank" rel="noopener">LessWrong</a></span>
+            </li>
+            <li>
+              <span class="work-title"><a href="https://www.lesswrong.com/posts/5WMwjEwam9HNQYZLZ/personascope-measuring-how-deeply-llms-adopt-personas" target="_blank" rel="noopener">Personascope: Measuring How Deeply LLMs Adopt Personas</a></span>
+              <span class="work-meta">with Kyuhee Kim, James Requeima and Sid Black &middot; LessWrong, 2026</span>
+              <span class="work-links"><a href="https://www.lesswrong.com/posts/5WMwjEwam9HNQYZLZ/personascope-measuring-how-deeply-llms-adopt-personas" target="_blank" rel="noopener">LessWrong</a> &middot; <a href="https://github.com/benjibrcz/personascope" target="_blank" rel="noopener">GitHub</a></span>
+            </li>
+          </ul>
+          <p class="work-more"><a href="projects.html">All projects &rarr;</a> &nbsp; <a href="publications.html">All publications &rarr;</a></p>
+        </section>
       </div>
 
     </div>
-
-    <!-- Recent work -->
-    <section class="home-work" id="recent-work">
-      <h2 class="home-subhead">Recent work</h2>
-      <ul class="work-list">
-        <li>
-          <span class="work-title"><a href="https://arxiv.org/abs/2609.06851" target="_blank" rel="noopener">You Are What You Read: Misalignment via In-Context Persona Induction</a></span>
-          <span class="work-meta">with Kyuhee Kim and Cozmin Ududec &middot; arXiv, 2026</span>
-          <span class="work-links"><a href="https://arxiv.org/abs/2609.06851" target="_blank" rel="noopener">arXiv</a> &middot; <a href="https://www.lesswrong.com/posts/cffGZn8LYBg2jyPvg/in-context-learning-alone-can-induce-weird-generalisation-5" target="_blank" rel="noopener">LessWrong</a></span>
-        </li>
-        <li>
-          <span class="work-title"><a href="https://www.lesswrong.com/posts/Jc9YZEmqHgocAKiaH/does-distilling-claude-carry-the-persona-with-it" target="_blank" rel="noopener">Does Distilling Claude Carry the Persona With It?</a></span>
-          <span class="work-meta">with Kyuhee Kim &middot; LessWrong, 2026</span>
-          <span class="work-links"><a href="https://www.lesswrong.com/posts/Jc9YZEmqHgocAKiaH/does-distilling-claude-carry-the-persona-with-it" target="_blank" rel="noopener">LessWrong</a></span>
-        </li>
-        <li>
-          <span class="work-title"><a href="https://www.lesswrong.com/posts/5WMwjEwam9HNQYZLZ/personascope-measuring-how-deeply-llms-adopt-personas" target="_blank" rel="noopener">Personascope: Measuring How Deeply LLMs Adopt Personas</a></span>
-          <span class="work-meta">with Kyuhee Kim, James Requeima and Sid Black &middot; LessWrong, 2026</span>
-          <span class="work-links"><a href="https://www.lesswrong.com/posts/5WMwjEwam9HNQYZLZ/personascope-measuring-how-deeply-llms-adopt-personas" target="_blank" rel="noopener">LessWrong</a> &middot; <a href="https://github.com/benjibrcz/personascope" target="_blank" rel="noopener">GitHub</a></span>
-        </li>
-      </ul>
-      <p class="work-more"><a href="projects.html">All projects &rarr;</a> &nbsp; <a href="publications.html">All publications &rarr;</a></p>
-    </section>
 
   </div>
 </main>

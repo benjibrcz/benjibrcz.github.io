@@ -609,13 +609,7 @@ footer p {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.15;
-  margin-bottom: 0.35rem;
-}
-
-.home-tagline {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .home-main p {
@@ -644,42 +638,14 @@ footer p {
   margin: 1.75rem 0 0.75rem;
 }
 
-.home-questions {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  max-width: 62ch;
-}
-
-.home-questions li {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: var(--text-secondary);
-}
-
-.q-title {
-  font-weight: 600;
-  color: var(--text);
-}
-
-.q-tag {
-  color: var(--text-faint);
-  font-size: 0.85rem;
-  margin-left: 0.25rem;
-}
-
-.q-desc {
-  display: block;
-}
-
 /* Recent work */
 .home-work {
   min-height: 0;
   display: block;
-  padding: 2.5rem 0 0;
-  margin-top: 2.5rem;
+  padding: 1.5rem 0 0;
+  margin-top: 1.75rem;
   border-top: 1px solid var(--border);
+  max-width: 62ch;
 }
 
 .home-work .home-subhead {
@@ -729,6 +695,7 @@ footer p {
 .work-more a {
   color: var(--text-muted);
   font-weight: 500;
+  text-decoration: none;
 }
 
 .work-more a:hover {
@@ -778,7 +745,4 @@ footer.footer-min p {
     text-align: center;
   }
 
-  .home-tagline {
-    text-align: center;
-  }
 }
