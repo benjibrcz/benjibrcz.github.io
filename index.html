@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Benjamin Berczi — ML Scientist &amp; AI Safety Researcher</title>
-  <meta name="description" content="Personal website of Benjamin Berczi, Machine Learning Scientist and AI Safety Researcher.">
+  <title>Benjamin Berczi</title>
+  <meta name="description" content="Benjamin Berczi. Machine learning scientist and AI safety researcher at MATS, studying how personas are induced in language models and how they drive misalignment.">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Benjamin Berczi — ML Scientist & AI Safety Researcher">
-  <meta property="og:description" content="Machine Learning Scientist and AI Safety Researcher. Currently a MATS research scholar working on interpreting goals and beliefs in LLMs.">
+  <meta property="og:title" content="Benjamin Berczi">
+  <meta property="og:description" content="Machine learning scientist and AI safety researcher at MATS, studying how personas are induced in language models and how they drive misalignment.">
   <meta property="og:image" content="https://benjibrcz.github.io/benji_profile_pic.jpg">
-  <meta property="og:url" content="https://benjibrcz.github.io">
+  <meta property="og:url" content="https://benjibrcz.github.io/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
 
@@ -19,7 +19,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -42,53 +42,115 @@
   </div>
 </nav>
 
-<!-- Hero -->
-<section class="hero" id="hero">
+<main class="home">
   <div class="container">
-    <div class="hero-content">
-      <h1>Benjamin Berczi</h1>
-    </div>
-  </div>
-  <canvas class="hero-photo" id="hero-photo-canvas" width="480" height="480"></canvas>
-  <a href="#about" class="scroll-hint" aria-label="Scroll down">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-  </a>
-</section>
 
-<!-- About -->
-<section id="about" class="about">
-  <div class="container fade-in">
-    <h2 class="about-headline">Hi, I'm Benji!<br>Machine learning scientist,<br>AI safety researcher<br>and former theoretical physicist.</h2>
-    <div class="content-card">
-      <p class="about-current">Currently I am at <strong>MATS</strong> studying LLM belief dynamics.</p>
-      <p>
-        Before that, I was an ML scientist at Depop, building large-scale recommender systems with PyTorch and Spark. In parallel, I pursued AI safety research through AI Safety Camp and independent collaborations, working on mechanistic interpretability and activation steering. I originally have a background in theoretical physics, having done a PhD at the University of Nottingham where I created simulations of quantum matter in curved spacetime to study how tiny black holes form and the quantum effects around them.
-      </p>
+    <div class="home-grid">
+
+      <!-- Sidebar: photo, location, links -->
+      <aside class="home-side">
+        <canvas class="home-photo" id="hero-photo-canvas" width="480" height="480" aria-label="Portrait of Benjamin Berczi"></canvas>
+        <ul class="home-links">
+          <li class="home-location">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            London, UK
+          </li>
+          <li>
+            <a href="mailto:benji.berczi@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              Email
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/benjibrcz" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.84 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6.02 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></svg>
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/benjamin-berczi-b7bb0a133" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77A1.75 1.75 0 0 0 0 1.73v20.54A1.75 1.75 0 0 0 1.77 24h20.45A1.75 1.75 0 0 0 24 22.27V1.73A1.75 1.75 0 0 0 22.22 0z"/></svg>
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://orcid.org/0000-0001-9390-6124" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378a.855.855 0 1 1 0 1.71.855.855 0 0 1 0-1.71zm-.754 3.348h1.508v11.13H6.615V7.726zm3.959 0h4.089c4.225 0 5.586 2.647 5.586 5.555 0 3.1-2.028 5.575-5.67 5.575h-4.005V7.726zm1.508 1.337v8.456h2.434c3.04 0 4.228-1.828 4.228-4.258 0-2.6-1.38-4.198-4.149-4.198h-2.513z"/></svg>
+              ORCID
+            </a>
+          </li>
+          <li>
+            <a href="resume.pdf" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              CV
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Main column: name, bio, questions -->
+      <div class="home-main">
+        <h1>Benjamin Berczi</h1>
+        <p class="home-tagline">Machine learning scientist &middot; AI safety researcher &middot; former theoretical physicist</p>
+
+        <p>
+          I'm a research scholar at <a href="https://www.matsprogram.org/" target="_blank" rel="noopener">MATS</a> in the evaluations stream, mentored by Cozmin Ududec (<a href="https://www.aisi.gov.uk/" target="_blank" rel="noopener">UK AISI</a>). I study how personas and latent modes are induced in language models, and how they drive misalignment.
+        </p>
+        <p>
+          Before MATS I was an ML scientist at Depop, building large-scale recommender systems. Earlier I did a PhD in theoretical physics at the University of Nottingham, simulating quantum matter in curved spacetime to study how tiny black holes form.
+        </p>
+
+        <h2 class="home-subhead">Current questions</h2>
+        <ul class="home-questions">
+          <li>
+            <span class="q-title">Benign context as an attack surface.</span>
+            <span class="q-tag">[Paper]</span>
+            <span class="q-desc">Biographical facts alone, placed in a model's context, induce a persona that spreads misalignment to questions the facts never touch.</span>
+          </li>
+          <li>
+            <span class="q-title">How deeply models adopt personas.</span>
+            <span class="q-tag">[Personascope]</span>
+            <span class="q-desc">Separating how fully a model role-plays a character from how much its values actually shift, with an open-source measurement pipeline.</span>
+          </li>
+          <li>
+            <span class="q-title">Personas as Bayesian mode selection.</span>
+            <span class="q-tag">[Ongoing]</span>
+            <span class="q-desc">Treating behaviour as a posterior over personas that pretraining, fine-tuning and in-context evidence reshape on a shared scale.</span>
+          </li>
+        </ul>
+      </div>
+
     </div>
+
+    <!-- Recent work -->
+    <section class="home-work" id="recent-work">
+      <h2 class="home-subhead">Recent work</h2>
+      <ul class="work-list">
+        <li>
+          <span class="work-title"><a href="https://arxiv.org/abs/2609.06851" target="_blank" rel="noopener">You Are What You Read: Misalignment via In-Context Persona Induction</a></span>
+          <span class="work-meta">with Kyuhee Kim and Cozmin Ududec &middot; arXiv, 2026</span>
+          <span class="work-links"><a href="https://arxiv.org/abs/2609.06851" target="_blank" rel="noopener">arXiv</a> &middot; <a href="https://www.lesswrong.com/posts/cffGZn8LYBg2jyPvg/in-context-learning-alone-can-induce-weird-generalisation-5" target="_blank" rel="noopener">LessWrong</a></span>
+        </li>
+        <li>
+          <span class="work-title"><a href="https://www.lesswrong.com/posts/Jc9YZEmqHgocAKiaH/does-distilling-claude-carry-the-persona-with-it" target="_blank" rel="noopener">Does Distilling Claude Carry the Persona With It?</a></span>
+          <span class="work-meta">with Kyuhee Kim &middot; LessWrong, 2026</span>
+          <span class="work-links"><a href="https://www.lesswrong.com/posts/Jc9YZEmqHgocAKiaH/does-distilling-claude-carry-the-persona-with-it" target="_blank" rel="noopener">LessWrong</a></span>
+        </li>
+        <li>
+          <span class="work-title"><a href="https://www.lesswrong.com/posts/5WMwjEwam9HNQYZLZ/personascope-measuring-how-deeply-llms-adopt-personas" target="_blank" rel="noopener">Personascope: Measuring How Deeply LLMs Adopt Personas</a></span>
+          <span class="work-meta">with Kyuhee Kim, James Requeima and Sid Black &middot; LessWrong, 2026</span>
+          <span class="work-links"><a href="https://www.lesswrong.com/posts/5WMwjEwam9HNQYZLZ/personascope-measuring-how-deeply-llms-adopt-personas" target="_blank" rel="noopener">LessWrong</a> &middot; <a href="https://github.com/benjibrcz/personascope" target="_blank" rel="noopener">GitHub</a></span>
+        </li>
+      </ul>
+      <p class="work-more"><a href="projects.html">All projects &rarr;</a> &nbsp; <a href="publications.html">All publications &rarr;</a></p>
+    </section>
+
   </div>
-</section>
+</main>
 
 <!-- Footer -->
-<footer>
+<footer class="footer-min">
   <div class="container">
-    <div class="footer-links">
-      <span class="footer-email">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        benji.berczi [at] gmail.com
-      </span>
-      <a href="https://github.com/benjibrcz" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.84 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6.02 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></svg>
-        GitHub
-      </a>
-      <a href="https://www.linkedin.com/in/benjamin-berczi-b7bb0a133" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77A1.75 1.75 0 0 0 0 1.73v20.54A1.75 1.75 0 0 0 1.77 24h20.45A1.75 1.75 0 0 0 24 22.27V1.73A1.75 1.75 0 0 0 22.22 0z"/></svg>
-        LinkedIn
-      </a>
-      <a href="https://orcid.org/0000-0001-9390-6124" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378a.855.855 0 1 1 0 1.71.855.855 0 0 1 0-1.71zm-.754 3.348h1.508v11.13H6.615V7.726zm3.959 0h4.089c4.225 0 5.586 2.647 5.586 5.555 0 3.1-2.028 5.575-5.67 5.575h-4.005V7.726zm1.508 1.337v8.456h2.434c3.04 0 4.228-1.828 4.228-4.258 0-2.6-1.38-4.198-4.149-4.198h-2.513z"/></svg>
-        ORCID
-      </a>
-    </div>
     <p>&copy; 2026 Benjamin Berczi</p>
   </div>
 </footer>
@@ -103,20 +165,6 @@
     link.addEventListener('click', function () {
       document.querySelector('nav ul').classList.remove('open');
     });
-  });
-
-  // Scroll-triggered fade-in
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-
-  document.querySelectorAll('.fade-in').forEach(function (el) {
-    observer.observe(el);
   });
 
   // Dark / light mode toggle
@@ -155,6 +203,7 @@
     var r = size / 2;
     var edgeStart = 0.0;
     var numRings = 30;
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     // Source crop coords (set on load)
     var sx, sy, s;
 
@@ -194,7 +243,7 @@
       ctx.drawImage(img, sx, sy, s, s, 0, 0, size, size);
       ctx.restore();
 
-      requestAnimationFrame(draw);
+      if (!reduceMotion) requestAnimationFrame(draw);
     }
   })();
 </script>
